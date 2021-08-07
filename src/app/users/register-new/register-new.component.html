@@ -1,0 +1,48 @@
+
+
+    <div style="display: flex; justify-content: center; margin-top: 20vh;">
+        <h1>Register</h1>
+    </div>
+    <!-- 
+    <form [formGroup]='registerForm' (ngSubmit)='onSubmit()'>
+    
+        <label for="firstname">First Name</label>
+        <input id="firstname" name="firstname" formControlName='firstName'>
+    
+        <label for="lastname">Last Name</label>
+        <input id="lastname" name="lastname" formControlName='lastName'>
+    
+        <button class='btn btn-primary button' type='submit'>Register</button>
+        <fa-icon [icon]="faQuidditch"></fa-icon>
+    </form> -->
+    <div style="display: flex; justify-content: center; min-width: 30vw;">
+        <form [formGroup]='registerForm' (ngSubmit)='register()' style="min-width: 30vw;">
+
+            <div class="form-group">
+              <label for="firstname">First Name: </label>
+              <input type="text" class="form-control" id="firstname" placeholder="John" name="firstname" formControlName='firstName'>
+            </div>
+
+            <div class="form-group">
+              <label for="lastname">Last Name: </label>
+              <input type="text" class="form-control" id="lastname" placeholder="Doe" name="lastname" formControlName='lastName'>
+            </div>
+            <div class="form-group">
+                <label for="username">Username: </label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username" formControlName='username'>
+            </div>
+            <div class="form-group">
+                <label for="password">Password: </label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" formControlName='password'>
+            </div>
+            <div class="form-group">
+                <label for="verifyPassword">Verify Password: </label>
+                <input type="password" class="form-control" id="verifyPassword" name="verifyPassword" placeholder="Password">
+            </div>
+            <br>
+            <div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block" style="width: 100%;">Submit</button>
+            </div>
+          </form>
+    </div>
+
