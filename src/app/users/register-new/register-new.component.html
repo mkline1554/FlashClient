@@ -3,18 +3,7 @@
     <div style="display: flex; justify-content: center; margin-top: 20vh;">
         <h1>Register</h1>
     </div>
-    <!-- 
-    <form [formGroup]='registerForm' (ngSubmit)='onSubmit()'>
     
-        <label for="firstname">First Name</label>
-        <input id="firstname" name="firstname" formControlName='firstName'>
-    
-        <label for="lastname">Last Name</label>
-        <input id="lastname" name="lastname" formControlName='lastName'>
-    
-        <button class='btn btn-primary button' type='submit'>Register</button>
-        <fa-icon [icon]="faQuidditch"></fa-icon>
-    </form> -->
     <div style="display: flex; justify-content: center; min-width: 30vw;">
         <form [formGroup]='registerForm' (ngSubmit)='register()' style="min-width: 30vw;">
 

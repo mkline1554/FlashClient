@@ -18,9 +18,11 @@ export class RegisterNewComponent implements OnInit {
     password: ''
   });
 
-  constructor(private formBuilder: FormBuilder,
+  constructor(
+    private formBuilder: FormBuilder,
     private http: HttpClient,
-    private router: Router) { }
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
   }

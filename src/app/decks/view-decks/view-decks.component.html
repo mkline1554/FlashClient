@@ -1,0 +1,45 @@
+<div class="container">
+    <div *ngIf="decks == null">
+      <h4>
+        You do not have any decks right now :(
+      </h4>
+      <p>
+        Create a new deck to get started or view decks that other members have created
+      </p>
+    </div>
+    
+    <div *ngIf="decks != null">
+      
+      <div class="row">
+  
+        <div *ngFor="let deck of decks" class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+                {{deck.name}}
+              </h5>
+              <p class="card-text">
+                {{deck.category}}
+              </p>
+              <div class="btn-group" role="group" aria-label="Basic outlined example">
+                <button type="button" class="btn btn-outline-primary">
+                  Practice
+                </button>
+                <button type="button" class="btn btn-outline-primary" (click)="updateDeck(deck.id)">
+                  Update
+                </button>
+                <button type="button" class="btn btn-outline-primary">
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>     
+  
+      </div>
+  
+    </div>
+  
+  </div>
+  
+  

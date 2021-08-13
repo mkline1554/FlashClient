@@ -1,52 +1,88 @@
 
-<div class="container">
-    <div class="card">
-        <div class="card-header">
-          Featured
+
+<div class="container" style="display: flex; justify-content: flex-end; margin-top: 10vh;">
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-outline-primary">
+      Add New Deck
+    </button>
+    <button type="button" class="btn btn-outline-primary">
+      <span *ngIf="viewMine">
+        View All
+      </span>
+      <span *ngIf="!viewMine">
+        View My Decks
+      </span>
+    </button>
+  </div>
+</div>
+
+<ng-container *ngIf="viewDecks"> 
+  <app-view-decks 
+    [decks]="decks"
+    (deckSelected)="onDeckSelected($event)">
+
+  </app-view-decks>
+</ng-container>
+
+<ng-container *ngIf="updateDeck"> 
+  <app-update-deck [deck]="deck">
+
+  </app-update-deck>
+</ng-container>
+
+<ng-container *ngIf="createDeck">
+  <app-create-deck></app-create-deck>
+</ng-container>
+
+
+<br>
+
+<!-- <div class="container">
+  <div *ngIf="decks == null">
+    <h4>
+      You do not have any decks right now :(
+    </h4>
+    <p>
+      Create a new deck to get started or view decks that other members have created
+    </p>
+  </div>
+  
+  <div *ngIf="decks != null">
+    
+    <div class="row">
+
+      <div *ngFor="let deck of decks" class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">
+              {{deck.name}}
+            </h5>
+            <p class="card-text">
+              {{deck.category}}
+            </p>
+            <div class="btn-group" role="group" aria-label="Basic outlined example">
+              <button type="button" class="btn btn-outline-primary">
+                Practice
+              </button>
+              <button type="button" class="btn btn-outline-primary">
+                Update
+              </button>
+              <button type="button" class="btn btn-outline-primary">
+                Delete
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="card-body">
-          <h5 class="card-title">Spanish - level 1</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Edit</a>
-          <a href="#" class="btn btn-primary">Delete</a>
-        </div>
-      </div>
+      </div>     
+
+    </div>
+
+  </div>
+
 </div>
+
+<br>
 <div class="container">
-    <ol class="list-group list-group-numbered">
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-          <div class="ms-2 me-auto">
-            <div class="fw-bold">Subheading</div>
-            Cras justo odio
-          </div>
-          <span class="badge bg-primary rounded-pill">14</span>
-          <span class="badge bg-primary rounded-pill">14</span>
-          <span class="badge bg-primary rounded-pill">14</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-          <div class="ms-2 me-auto">
-            <div class="fw-bold">Subheading</div>
-            Cras justo odio
-          </div>
-          <span class="badge bg-primary rounded-pill">14</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-          <div class="ms-2 me-auto">
-            <div class="fw-bold">Subheading</div>
-            Cras justo odio
-          </div>
-          <span class="badge bg-primary rounded-pill">14</span>
-        </li>
-      </ol>
-</div>
-<div class="container">
-    <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">Next</a></li>
-        </ul>
-      </nav>
-</div>
+  <button type="button" routerLink="create" class="btn btn-primary">Add New</button>
+</div> -->
+

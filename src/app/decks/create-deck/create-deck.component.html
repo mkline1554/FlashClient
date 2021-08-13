@@ -1,1 +1,43 @@
-<p>create-deck works!</p>
+<div style="display: flex; justify-content: center; margin-top: 20vh;">
+    <h1>Create Deck</h1>
+</div>
+
+<div style="display: flex; justify-content: center; min-width: 30vw;">
+    <form [formGroup]='createDeckForm' (ngSubmit)='create()' style="min-width: 50vw; max-width: 50vw;">
+
+        <div class="form-group">
+            <label for="name">Name </label>
+            <input type="text" class="form-control" id="name" 
+                   name="name" placeholder="Beginner Spanish" 
+                   formControlName='name'>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Category </label>
+            <input type="text" class="form-control" id="category" 
+                   name="category" placeholder="Language" 
+                   formControlName='category'>
+        </div>
+
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="isPublic" 
+                   name="isPublic"
+                   formControlName='isPublic'>
+                   <label class="form-check-label" for="isPublic">Public </label> 
+                   <i (click)="togglePublicMessage()">&#9432;</i>
+        </div>
+        <div *ngIf="showPublicMessage" class="alert alert-info" role="alert">
+            By making this deck public you can share it with the world and allow others to use this deck.
+            It will also allow other members to leave you reviews on you deck and comment on cards in the deck.
+          </div>
+       
+        <br>
+        <div>
+            <button type="submit" 
+                    class="btn btn-primary btn-lg btn-block" 
+                    style="width: 100%;">
+                Submit
+            </button>
+        </div>
+      </form>
+</div>

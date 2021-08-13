@@ -27,6 +27,7 @@ import { RegisterAddressComponent } from './users/register-address/register-addr
 // Misc
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { ViewDecksComponent } from './decks/view-decks/view-decks.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { HomeComponent } from './home/home.component';
     RegisterNewComponent,
     RegisterContactInformationComponent,
     RegisterAddressComponent,
-    HomeComponent
+    HomeComponent,
+    ViewDecksComponent
   ],
   imports: [
     BrowserModule,

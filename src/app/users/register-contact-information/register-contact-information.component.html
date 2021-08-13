@@ -1,1 +1,54 @@
-<p>register-contact-information works!</p>
+<div style="display: flex; justify-content: center; margin-top: 20vh;">
+    <h1>Update Contact Information</h1>
+</div>
+
+<div style="display: flex; justify-content: center; min-width: 30vw;">
+    <form [formGroup]='contactInformationForm' (ngSubmit)='updateContactInformation()' style="min-width: 30vw;">
+
+        <div class="form-group">
+          <label for="email">Email: </label>
+          <input type="email" class="form-control" id="email" 
+                 placeholder="someone@email.com" name="email" 
+                 formControlName='email'>
+        </div>
+
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number: </label>
+          <input type="text" class="form-control" id="phoneNumber" 
+                 placeholder="555-555-5555" name="phoneNumber" 
+                 formControlName='phoneNumber'>
+        </div>
+        <div class="form-group">
+            <label for="facebook">Facebook: </label>
+            <input type="url" class="form-control" id="facebook" 
+                   name="facebook" placeholder="https://facebook.com/flash.drive" 
+                   formControlName='facebook'>
+        </div>
+        <div class="form-group">
+            <label for="twitter">Twitter: </label>
+            <input type="text" class="form-control" id="twitter" 
+                   name="twitter" placeholder="@FlashDrive" 
+                   formControlName='twitter'>
+        </div>
+        <div class="form-group">
+            <label for="instagram">Instagram: </label>
+            <input type="text" class="form-control" id="instagram" 
+                   name="instagram" placeholder="Whatever an instagram looks like" 
+                   formControlName='instagram'>
+        </div>
+        <div class="form-group">
+            <label for="linkedIn">LinkedIn: </label>
+            <input type="url" class="form-control" 
+                   id="linkedIn" name="linkedIn" placeholder="linkedin.com/in/flash-drive" 
+                   formControlName='linkedIn'>
+        </div>
+        <br>
+        <div>
+            <button type="submit" 
+                    class="btn btn-primary btn-lg btn-block" 
+                    style="width: 100%;">
+                Submit
+            </button>
+        </div>
+      </form>
+</div>

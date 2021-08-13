@@ -1,1 +1,53 @@
-<p>register-address works!</p>
+<div style="display: flex; justify-content: center; margin-top: 20vh;">
+    <h1>Update Address</h1>
+</div>
+
+<div style="display: flex; justify-content: center; min-width: 30vw;">
+    <form [formGroup]='addressForm' (ngSubmit)='updateAddress()' style="min-width: 30vw;">
+
+        <div class="form-group">
+          <label for="streetAddress1">Address Line 1: </label>
+          <input type="text" class="form-control" id="streetAddress1" 
+                 placeholder="1234 N Main St." name="streetAddress1" 
+                 formControlName='streetAddress1'>
+        </div>
+        <div class="form-group">
+            <label for="streetAddress2">Address Line 2: </label>
+            <input type="text" class="form-control" id="streetAddress2" 
+                   name="streetAddress2" placeholder="Apt. 1" 
+                   formControlName='streetAddress2'>
+        </div>
+        <div class="form-group">
+            <label for="city">City: </label>
+            <input type="text" class="form-control" id="city" 
+                   name="city" placeholder="Salt Lake City" 
+                   formControlName='city'>
+        </div>
+        <div class="form-group">
+            <label for="state">State: </label>
+            <input type="text" class="form-control" id="state" 
+                   name="state" placeholder="UT" 
+                   formControlName='state'>
+        </div>
+        <div class="form-group">
+            <label for="zip">Zip: </label>
+            <input type="text" class="form-control" 
+                   id="zip" name="zip" placeholder="84012" 
+                   formControlName='zip'>
+        </div>
+        <div class="form-group">
+            <label for="country">Country: </label>
+            <input type="text" class="form-control" 
+                   id="country" name="country" placeholder="USA" 
+                   formControlName='country'>
+        </div>
+        <br>
+        <div>
+            <button type="submit" 
+                    class="btn btn-primary btn-lg btn-block" 
+                    style="width: 100%;">
+                Submit
+            </button>
+        </div>
+      </form>
+</div>

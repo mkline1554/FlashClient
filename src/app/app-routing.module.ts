@@ -23,8 +23,8 @@ const routes: Routes = [
     {path: 'register/address', component: RegisterAddressComponent},
 
     {path: 'decks', component: DecksComponent},
-    {path: 'decks/create', component: CreateDeckComponent},
-    {path: 'decks/update', component: UpdateDeckComponent},
+    // {path: 'decks/create', component: CreateDeckComponent},
+    // {path: 'decks/update', component: UpdateDeckComponent},
 
     {path: 'cards', component: CardsComponent},
     {path: 'cards/create', component: CreateCardComponent},
