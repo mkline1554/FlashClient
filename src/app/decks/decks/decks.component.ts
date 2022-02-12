@@ -41,4 +41,11 @@ export class DecksComponent implements OnInit {
     this.updateDeck = true;
   }
 
+  toggleShowCreateForm(){
+    this.createDeck = !this.createDeck;
+  }
+  toggleViewAll(){
+    this.viewDecks = !this.viewDecks;
+  }
+
 }

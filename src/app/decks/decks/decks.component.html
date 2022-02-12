@@ -2,11 +2,11 @@
 
 <div class="container" style="display: flex; justify-content: flex-end; margin-top: 10vh;">
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-outline-primary">
+    <button type="button" class="btn btn-outline-primary" (click)="toggleShowCreateForm()">
       Add New Deck
     </button>
     <button type="button" class="btn btn-outline-primary">
-      <span *ngIf="viewMine">
+      <span *ngIf="viewMine" (click)="toggleViewAll()">
         View All
       </span>
       <span *ngIf="!viewMine">

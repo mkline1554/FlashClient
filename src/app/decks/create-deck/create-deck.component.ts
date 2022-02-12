@@ -15,7 +15,7 @@ export class CreateDeckComponent implements OnInit {
   createDeckForm = this.formBuilder.group({
     name: '',
     category: '',
-    isPublic: ''
+    isPublic: false
   })
 
   showPublicMessage: boolean = false;
