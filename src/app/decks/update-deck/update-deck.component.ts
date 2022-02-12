@@ -18,7 +18,7 @@ export class UpdateDeckComponent implements OnInit {
   updateForm = this.formBuilder.group({
     name: '',
     category: '',
-    isPublic: ''
+    isPublic: false
   })
 
   constructor(
@@ -28,7 +28,9 @@ export class UpdateDeckComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    console.log(this.deck);
     this.updateForm = this.formBuilder.group({
+      id: this.deck.id,
       name: this.deck.name,
       category: this.deck.category,
       isPublic: this.deck.isPublic

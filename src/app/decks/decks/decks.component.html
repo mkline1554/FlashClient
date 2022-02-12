@@ -15,6 +15,7 @@
     </button>
   </div>
 </div>
+<br>
 
 <ng-container *ngIf="viewDecks"> 
   <app-view-decks 
@@ -30,7 +31,7 @@
   </app-update-deck>
 </ng-container>
 
-<ng-container *ngIf="createDeck">
+<ng-container *ngIf="showCreateDeck">
   <app-create-deck></app-create-deck>
 </ng-container>
 

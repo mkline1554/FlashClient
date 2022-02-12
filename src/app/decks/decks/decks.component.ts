@@ -13,7 +13,7 @@ export class DecksComponent implements OnInit {
 
   viewDecks: boolean = true;
   updateDeck: boolean = false;
-  createDeck: boolean = false;
+  showCreateDeck: boolean = false;
   viewMine: boolean = true;
 
   constructor(    
@@ -29,23 +29,23 @@ export class DecksComponent implements OnInit {
       else{
         this.decks = null;
       }
-      console.log(this.decks);
     })
   }
 
   onDeckSelected(deckId: number){
-
     this.deck = this.decks.find((x: { id: number; }) => x.id == deckId);
-    console.log(this.deck);
     this.viewDecks = false;
     this.updateDeck = true;
   }
 
   toggleShowCreateForm(){
-    this.createDeck = !this.createDeck;
+    this.showCreateDeck = !this.showCreateDeck;
+    this.viewDecks = false;
   }
+
   toggleViewAll(){
     this.viewDecks = !this.viewDecks;
+    this.showCreateDeck = false;
   }
 
 }

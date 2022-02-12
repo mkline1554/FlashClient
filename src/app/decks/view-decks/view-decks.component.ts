@@ -25,7 +25,7 @@ export class ViewDecksComponent implements OnInit {
         else{
           this.decks = null;
         }
-      })
+      });
   }
 
   updateDeck(e: number){
